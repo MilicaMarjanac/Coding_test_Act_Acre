@@ -1,0 +1,16 @@
+@import '../base/variables'; 
+
+/* Mixin for media queries */
+@mixin respond-down($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @if $breakpoint-value {
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  }
+   @else {
+    @warn "No value found for '#{$breakpoint}' in $breakpoints map!";
+  }
+}
+

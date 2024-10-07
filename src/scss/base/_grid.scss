@@ -1,0 +1,80 @@
+@import "../base/variables";
+
+@import "../mixins/media-queries";
+@import "../mixins/grid-mixin";
+
+body > main {
+  padding-top: 65px;
+
+  @include wrapper();
+}
+
+.product {
+  @include container();
+
+  display: grid;
+  grid-template-columns: 1fr 540px;
+  grid-template-rows: min-content 1fr;
+
+  @include respond-down(lg) {
+    grid-template-columns: 1fr 440px;
+    grid-template-rows: min-content 35px 1fr;
+  }
+
+
+  @include respond-down(md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+  }
+
+  @include respond-down(sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+  }
+
+  @include respond-down(xs) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+  }
+}
+
+.product-ingredients {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  grid-template-rows: 1fr;
+
+  @include respond-down(xl) {
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr;
+  }
+
+  @include respond-down(lg) {
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr;
+  }
+
+  @include respond-down(md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  @include respond-down(sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  @include respond-down(xs) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+
+  @include container($container-background);
+}
+
+.more-offers {
+  padding: 80px 0;
+
+  @include container($container-background);
+}
+

@@ -1,0 +1,38 @@
+@import '../base/variables';
+
+// Base container mixin
+@mixin container($container-background: null) {
+    grid-column: 2 / 3;
+  
+    @if $container-background != null {
+      background-color: $container-background;
+    }
+  
+  
+}
+
+@mixin wrapper {
+  display: grid;
+  grid-template-columns: 1fr $container-xxl 1fr;
+
+  // Media queries for smaller viewports
+  @include respond-down(xl) {
+    grid-template-columns: 1fr $container-xl 1fr;
+  }
+
+  @include respond-down(lg) {
+    grid-template-columns: 1fr $container-lg 1fr;
+  }
+
+  @include respond-down(md) {
+    grid-template-columns: 1fr $container-md 1fr;
+  }
+
+  @include respond-down(sm) {
+    grid-template-columns: 1fr $container-sm 1fr;
+  }
+
+  @include respond-down(xs) {
+    grid-template-columns: 1fr 100% 1fr;
+  }
+}

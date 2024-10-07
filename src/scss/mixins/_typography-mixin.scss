@@ -1,0 +1,15 @@
+// _mixins.scss
+@mixin text-uppercase {
+  text-transform: uppercase;
+}
+@mixin text-capitalize {
+  text-transform: capitalize;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin text-italic {
+  font-style: italic;
+}

@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "rimraf": "^6.0.1",
+    "sharp": "^0.31.3"
+  },
+  "scripts": {
+    "start": "parcel serve src/views/index.html",
+    "build": "parcel build src/views/index.html --public-url ./",
+    "clean": "rimraf .parcel-cache dist"
+  },
+  "dependencies": {
+    "swiper": "^11.1.14"
+  }
+}

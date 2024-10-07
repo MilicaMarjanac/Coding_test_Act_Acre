@@ -1,0 +1,44 @@
+@import "../base/variables";
+@import "../base/typography";
+@import "../mixins/typography-mixin";
+
+.checkout {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+
+  .counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    margin-right: 16px;
+  }
+
+  input[type="button"] {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: $font-size-p;
+    width: 30px;
+  }
+
+  input[type="text"].count {
+    border: none;
+    font-size: $font-size-p;
+    width: 50px;
+    @include text-center;
+  }
+
+  @include respond-down(md) {
+    width: 60%;
+  }
+
+  @include respond-down(sm) {
+    width: 80%;
+  }
+
+  @include respond-down(xs) {
+    width: 100%;
+  }
+}
