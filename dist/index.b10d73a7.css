@@ -89,9 +89,16 @@ table {
   }
 }
 
+@media (width <= 1500px) {
+  .product {
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr 440px;
+  }
+}
+
 @media (width <= 1200px) {
   .product {
-    grid-template-rows: min-content 35px 1fr;
+    grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr 440px;
   }
 }
@@ -358,9 +365,16 @@ table {
   }
 }
 
+@media (width <= 1500px) {
+  .product {
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr 440px;
+  }
+}
+
 @media (width <= 1200px) {
   .product {
-    grid-template-rows: min-content 35px 1fr;
+    grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr 440px;
   }
 }
@@ -688,11 +702,25 @@ label, button {
 
 .product-image {
   grid-area: 1 / 1 / 3 / 2;
+  width: 100%;
+  height: 100%;
+}
+
+.product-image picture, .product-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width <= 1500px) {
+  .product-image {
+    grid-area: 1 / 1 / 3 / 2;
+  }
 }
 
 @media (width <= 1200px) {
   .product-image {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 1 / 1 / 3 / 2;
   }
 }
 
@@ -717,6 +745,13 @@ label, button {
 .product-breadcrumbs {
   grid-area: 1 / 2 / 2 / 3;
   padding: 22px 70px;
+}
+
+@media (width <= 1500px) {
+  .product-breadcrumbs {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 22px 70px;
+  }
 }
 
 @media (width <= 1200px) {
@@ -811,10 +846,21 @@ label, button {
   margin-bottom: 18px;
 }
 
+@media (width <= 1500px) {
+  .product-description {
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 30px 40px;
+  }
+
+  .product-description h3 {
+    margin-bottom: 20px;
+  }
+}
+
 @media (width <= 1200px) {
   .product-description {
     grid-area: 2 / 2 / 4 / 3;
-    padding: 30px 24px;
+    padding: 30px;
   }
 
   .product-description h3 {
@@ -1052,9 +1098,16 @@ body > main {
   display: grid;
 }
 
+@media (width <= 1500px) {
+  .product {
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr 440px;
+  }
+}
+
 @media (width <= 1200px) {
   .product {
-    grid-template-rows: min-content 35px 1fr;
+    grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr 440px;
   }
 }
