@@ -653,6 +653,17 @@ label, button {
   letter-spacing: .05em;
 }
 
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
 .checkout {
   align-items: center;
   padding-top: 40px;
@@ -698,6 +709,10 @@ label, button {
   .checkout {
     width: 100%;
   }
+}
+
+fieldset {
+  border: none;
 }
 
 .product-image {
