@@ -1,6 +1,8 @@
-@import "../base/variables";
 @import "../mixins/media-queries";
 
+/*
+  NAVBAR
+  */
 .navbar {
   position: fixed;
   width: 100%;
@@ -18,22 +20,20 @@
     transform: translateY(-100%); // Move the navbar out of view when hidden
   }
 
-  @include respond-down(xs){
+  @include respond-down(xs) {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
   }
-
 }
 
 /*
   HAMBURGER ICON
   */
+
 .menu-icon {
   display: none;
-}
 
-@include respond-down(md) {
-  .menu-icon {
+  @include respond-down(md) {
     display: block;
     order: 1;
     margin: 0;
@@ -77,17 +77,48 @@
   }
 }
 
+/*
+  NAVIGATION ITEM
+  */
+
 .nav-link {
   margin-left: 0;
   padding: 10px;
-}
 
-@include respond-down(md) {
-  .nav-link {
+  @include respond-down(md) {
     margin: 0;
+  }
+
+  &.search {
+    order: 3;
+
+    @include respond-down(md) {
+      order: 1;
+      margin-right: auto;
+    }
+  }
+
+  &.user {
+    order: 4;
+
+    @include respond-down(md) {
+      order: 3;
+      margin-left: auto;
+    }
+  }
+
+  &.cart {
+    order: 5;
+
+    @include respond-down(md) {
+      order: 3;
+    }
   }
 }
 
+/*
+  MAIN NAVIGATION
+  */
 .nav-menu {
   margin-left: auto;
   margin-right: auto;
@@ -113,9 +144,8 @@
       font-weight: $font-weight-semi-bold;
     }
   }
-}
-@include respond-down(md) {
-  .nav-menu {
+
+  @include respond-down(md) {
     position: fixed;
     left: -100%;
     top: 65px;
@@ -126,54 +156,26 @@
     transition: 0.3s;
     border-top: solid 1px $text-color-secondary-disabled;
     padding: 10px 0;
-  }
 
-  .nav-menu.active {
-    left: 0;
-  }
+    &.active {
+      left: 0;
+    }
 
-  .nav-item {
-    margin: 10px 0;
+    .nav-item {
+      margin: 10px 0;
+    }
   }
 }
 
+/*
+  LOGO
+  */
 .nav-logo {
   margin-right: 0;
-}
-@include respond-down(md) {
-  .nav-logo {
+
+  @include respond-down(md) {
     order: 2;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-.nav-link.search {
-  order: 3;
-}
-@include respond-down(md) {
-  .nav-link.search {
-    order: 1;
-    margin-right: auto;
-  }
-}
-
-.nav-link.user {
-  order: 4;
-}
-
-@include respond-down(md) {
-  .nav-link.user {
-    order: 3;
-    margin-left: auto;
-  }
-}
-
-.nav-link.cart {
-  order: 5;
-}
-@include respond-down(md) {
-  .nav-link.cart {
-    order: 3;
   }
 }

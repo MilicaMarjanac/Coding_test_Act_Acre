@@ -36,14 +36,14 @@ export default function navbar() {
     const currentScroll = window.scrollY || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop) {
-      /* SCROLLING UP */
+      // SCROLLING UP
       navbar.classList.add("hidden");
       closeMenu();
     } else {
-      /* SCROLLING DOWN */
+      // SCROLLING DOWN
       navbar.classList.remove("hidden");
     }
-    /*  FOR MOBILE OR NEGATIVE SCROLLING */
+    //  FOR MOBILE OR NEGATIVE SCROLLING
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 }

@@ -1,7 +1,5 @@
-@import "./base/_reset.scss";
-@import "./base/grid";
-@import "./base/typography";
-@import "./pages/shop";
+@import "./base";
+@import "./pages";
 
 body {
   background-color: $body-background;

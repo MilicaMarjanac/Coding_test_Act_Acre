@@ -584,20 +584,25 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"ebWYT":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _navbarJs = require("./components/navbar.js");
-var _navbarJsDefault = parcelHelpers.interopDefault(_navbarJs);
-var _carouselJs = require("./components/carousel.js");
-var _carouselJsDefault = parcelHelpers.interopDefault(_carouselJs);
-var _shopJs = require("./pages/shop.js");
-var _shopJsDefault = parcelHelpers.interopDefault(_shopJs);
+var _indexJs = require("./components/_index.js");
+var _indexJs1 = require("./pages/_index.js");
 /* CALLING OTHER FUNCTIONS ON LOADING DOCUMENT */ document.addEventListener("DOMContentLoaded", function() {
-    (0, _navbarJsDefault.default)();
-    (0, _carouselJsDefault.default)();
-    (0, _shopJsDefault.default)();
+    (0, _indexJs.navbar)();
+    (0, _indexJs.carousel)();
+    (0, _indexJs1.shop)();
 });
 
-},{"./components/navbar.js":"cwRbP","./components/carousel.js":"eeEcT","./pages/shop.js":"k6LT1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cwRbP":[function(require,module,exports) {
+},{"./components/_index.js":"iLYp8","./pages/_index.js":"lAR1T"}],"iLYp8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "navbar", ()=>(0, _navbarJsDefault.default));
+parcelHelpers.export(exports, "carousel", ()=>(0, _carouselJsDefault.default));
+var _navbarJs = require("./navbar.js");
+var _navbarJsDefault = parcelHelpers.interopDefault(_navbarJs);
+var _carouselJs = require("./carousel.js");
+var _carouselJsDefault = parcelHelpers.interopDefault(_carouselJs);
+
+},{"./navbar.js":"cwRbP","./carousel.js":"eeEcT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cwRbP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>navbar);
@@ -624,10 +629,13 @@ function navbar() {
     window.addEventListener("scroll", ()=>{
         const currentScroll = window.scrollY || document.documentElement.scrollTop;
         if (currentScroll > lastScrollTop) {
-            /* SCROLLING UP */ navbar.classList.add("hidden");
+            // SCROLLING UP
+            navbar.classList.add("hidden");
             closeMenu();
-        } else /* SCROLLING DOWN */ navbar.classList.remove("hidden");
-        /*  FOR MOBILE OR NEGATIVE SCROLLING */ lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        } else // SCROLLING DOWN
+        navbar.classList.remove("hidden");
+        //  FOR MOBILE OR NEGATIVE SCROLLING
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
 }
 
@@ -8765,7 +8773,14 @@ function EffectCards(_ref) {
     });
 }
 
-},{"../shared/create-shadow.mjs":"bWkQq","../shared/effect-init.mjs":"88TTi","../shared/effect-target.mjs":"3jkAD","../shared/effect-virtual-transition-end.mjs":"dzFvU","../shared/utils.mjs":"9mU7V","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aErfw":[function() {},{}],"k6LT1":[function(require,module,exports) {
+},{"../shared/create-shadow.mjs":"bWkQq","../shared/effect-init.mjs":"88TTi","../shared/effect-target.mjs":"3jkAD","../shared/effect-virtual-transition-end.mjs":"dzFvU","../shared/utils.mjs":"9mU7V","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aErfw":[function() {},{}],"lAR1T":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "shop", ()=>(0, _shopJsDefault.default));
+var _shopJs = require("./shop.js");
+var _shopJsDefault = parcelHelpers.interopDefault(_shopJs);
+
+},{"./shop.js":"k6LT1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k6LT1":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>shop);

@@ -7,6 +7,7 @@
   align-items: center;
   padding-top: 40px;
 
+  // counter
   .counter-container {
     display: flex;
     align-items: center;
@@ -15,6 +16,7 @@
     margin-right: 16px;
   }
 
+  // + and - buttons
   input[type="button"] {
     border: none;
     padding: 10px;
@@ -23,6 +25,7 @@
     width: 30px;
   }
 
+  // text input
   input[type="text"].count {
     border: none;
     font-size: $font-size-p;

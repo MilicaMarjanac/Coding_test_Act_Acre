@@ -1,16 +1,15 @@
-@import '../base/variables';
+@import "../base/variables";
 
 // Base container mixin
 @mixin container($container-background: null) {
-    grid-column: 2 / 3;
-  
-    @if $container-background != null {
-      background-color: $container-background;
-    }
-  
-  
+  grid-column: 2 / 3;
+
+  @if $container-background != null {
+    background-color: $container-background;
+  }
 }
 
+/* Mixins for grid behaviour on different device sizes */
 @mixin wrapper {
   display: grid;
   grid-template-columns: 1fr $container-xxl 1fr;

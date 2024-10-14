@@ -1,6 +1,5 @@
-import navbar from "./components/navbar.js";
-import carousel from "./components/carousel.js";
-import shop from "./pages/shop.js";
+import { navbar, carousel } from "./components/_index.js";
+import { shop } from "./pages/_index.js";
 
 /* CALLING OTHER FUNCTIONS ON LOADING DOCUMENT */
 document.addEventListener("DOMContentLoaded", function () {

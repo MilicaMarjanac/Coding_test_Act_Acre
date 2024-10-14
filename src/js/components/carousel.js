@@ -3,9 +3,9 @@ import { Navigation } from "swiper/modules";
 
 import "swiper/swiper-bundle.css";
 
+/* CAROUSEL BEHAVIOUR SETTINGS */
 export default function carousel() {
   const swiper = new Swiper(".swiper", {
-
     modules: [Navigation],
 
     autoplay: {
@@ -23,7 +23,7 @@ export default function carousel() {
       576: {
         slidesPerView: 1.5,
       },
-      
+
       768: {
         slidesPerView: 1.5,
       },
@@ -35,10 +35,9 @@ export default function carousel() {
       1200: {
         slidesPerView: 3,
       },
-      
+
       1500: {
         slidesPerView: 3,
-
       },
     },
   });

@@ -7,12 +7,13 @@ $secondary-color: #948282; // Secondary color
 $tertiary-color: #ffffff; // Tertiary color
 $accent-color: #bfabab; // Accent color
 $additonal-color: #9f938b; // Additional color
-$dark-color: #101010; // Additional color
-$light-color: #a9a9a9; // Additional color
-//Body, Container
-$body-background: #f6f6f5;
-$container-background: $tertiary-color;
+$dark-color: #101010; // Dark color
+$light-color: #a9a9a9; // Light color
+$background-color: #f6f6f5; // Background color
 
+//Body, Container
+$body-background: $background-color;
+$container-background: $tertiary-color;
 
 //Navbar
 $navbar-background: $tertiary-color;
@@ -97,6 +98,3 @@ $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 $font-weight-black: 900;
-
-
-
